@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Run our action
         id: step1-id
-        uses: 0x4448/hello-github-action@v5
+        uses: 0x4448/hello-github-action@v6
         with:
           arg-name1: "0x4448"
 
       - name: Print the output
-        run: echo "The output is ${{ steps.step1-id.outputs.out }}"
+        run: echo "The output is ${{ steps.step1-id.outputs.out-var1 }}"
