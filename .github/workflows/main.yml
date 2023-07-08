@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Run our action
         id: step1-id
-        uses: 0x4448/hello-github-action@v6
+        uses: 0x4448/hello-github-action@v7
         with:
           arg-name1: "0x4448"
 
