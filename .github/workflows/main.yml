@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Run our action
+        id: step1-id
+        uses: 0x4448/hello-github-action@v1
+        with:
+          arg-name1: "0x4448"
+
+      - name: Print the output
+        run: echo "The output is ${{ steps.step1-id.outputs.out }}"
