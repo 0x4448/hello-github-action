@@ -9,7 +9,7 @@ inputs:
     default: "World"
 
 outputs:
-  out:
+  out-var1:
     description: "Some output"
 
 runs:
