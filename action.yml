@@ -10,7 +10,7 @@ inputs:
 
 outputs:
   out:
-    description: "Some outut"
+    description: "Some output"
 
 runs:
   using: "docker"
