@@ -7,9 +7,11 @@ jobs:
     steps:
       - name: Run our action
         id: step1-id
-        uses: 0x4448/hello-github-action@v7
+        uses: 0x4448/hello-github-action@v8
         with:
           arg-name1: "0x4448"
+          secrets: |
+            "github_token=${{ secrets.GITHUB_TOKEN }}"
 
       - name: Print the output
         run: echo "The output is ${{ steps.step1-id.outputs.out-var1 }}"
