@@ -1,0 +1,19 @@
+# action.yml
+name: "Example command line argument"
+description: "Echo the passed in argument"
+
+inputs:
+  arg-name1:
+    description: "Arg Name"
+    required: true
+    default: "World"
+
+outputs:
+  out:
+    description: "Some outut"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.arg-name1 }}
