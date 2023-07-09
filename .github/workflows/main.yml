@@ -1,4 +1,6 @@
-on: [push, workflow_dispatch]
+on:
+  schedule:
+    - cron: "0 * * * *"
 
 jobs:
   hello_world_job:
