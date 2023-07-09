@@ -27,5 +27,5 @@ runs:
 
     - name: Run action
       id: run-action
-      run: entrypoint.py "${{ inputs.arg-name1 }}"
-      shell: python
+      run: python entrypoint.py "${{ inputs.arg-name1 }}"
+      shell: bash
