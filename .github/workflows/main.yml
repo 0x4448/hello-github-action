@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Run our action
         id: step1-id
-        uses: 0x4448/hello-github-action@v9
+        uses: 0x4448/hello-github-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

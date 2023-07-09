@@ -9,11 +9,24 @@ inputs:
     default: "World"
 
 outputs:
-  out-var1:
+  the-output:
     description: "Some output"
+    value: ${{ steps.run-action.outputs.out-var1 }}
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - ${{ inputs.arg-name1 }}
+  using: "composite"
+  steps:
+
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+      shell: bash
+
+    - name: Run action
+      id: run-action
+      run: entrypoint.py "${{ inputs.arg-name1 }}"
+      shell: python
