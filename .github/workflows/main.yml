@@ -6,7 +6,7 @@ jobs:
     name: A job to say hello
     steps:
       - name: Run our action
-        id: step1-id
+        id: our-action-id
         uses: 0x4448/hello-github-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -14,4 +14,4 @@ jobs:
           arg-name1: "0x4448"
 
       - name: Print the output
-        run: echo "The output is ${{ steps.step1-id.outputs.out-var1 }}"
+        run: echo "The output is ${{ steps.our-action-id.outputs.the-output }}"
